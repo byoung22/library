@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="header">
+        <div><h1>My Library</h1></div>
+        <button>Log in</button>
+    </div>
+    <div class="body">
+        <button id="add-book">+ Add Book</button>
+        <div id="overlay" class="hidden"></div>
+        <form id="form" class="hidden">
+            <div>New Book</div>
+            <input type="text" id="title" name="title" required placeholder="Title">
+            <input type="text" id="author" name="author" required placeholder="Author">
+            <input type="number" id="page" name="number" required placeholder="Pages">
+            <label for="read">Have you read it?</label> 
+            <input type="checkbox" id="read" name="read"></input>
+            <button type="submit" id="submit"></button>
+        </form>
+    
+        <div id="container">
+        </div>
+    </div>
+    <div class="footer">
+        <div>Copyright © 2023 byoung22</div>
+    </div>
+</body>
+</html>
