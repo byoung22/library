@@ -8,7 +8,6 @@ const card = document.getElementsByClassName('card');
 const addBook = document.getElementById('add-book');
 const form = document.getElementById('form');
 const overlay = document.getElementById('overlay');
-const removeButton = document.getElementById('remove');
 
 let myLibrary = [];
 
@@ -25,12 +24,15 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
     submitForm();
 });
-/* DOESNT WORK YET
-removeButton.addEventListener('click', function() {
-    myLibrary.splice(card.id, card.id);
-    submitForm();
+
+container.addEventListener('click', function(event) {
+    if(event.target.classList.contains('remove')) {
+        const index = parseInt(event.target.getAttribute('data-index'));
+        myLibrary.splice(index, 1);
+        createCard();
+      };
 })
-*/
+
 // do stuff here
 function submitForm() {
     let titleVal = title.value;
@@ -82,11 +84,9 @@ function createCard() {
 
         let remove = document.createElement('button');
         remove.setAttribute('class', 'remove button right');
-        remove.setAttribute('id', 'remove');
+        remove.setAttribute('data-index', i);
         buttonContainer.appendChild(remove);
         remove.textContent = 'Remove';
-        
-        newCard.setAttribute('id',i);
     }
 }
 
