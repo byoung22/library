@@ -17,13 +17,15 @@
         <div class="button-row"><button id="add-book">+ Add Book</button></div>
         <div id="overlay" class="hidden"></div>
         <form id="form" class="hidden">
-            <div>New Book</div>
-            <input type="text" id="title" name="title" required placeholder="Title">
-            <input type="text" id="author" name="author" required placeholder="Author">
-            <input type="number" id="page" name="number" required placeholder="Pages">
-            <label for="read">Have you read it?</label> 
-            <input type="checkbox" id="read" name="read"></input>
-            <button type="submit" id="submit"></button>
+            <div class="form-row title">New Book Info</div>
+            <input class="form-row" type="text" id="title" name="title" required placeholder="Title">
+            <input class="form-row" type="text" id="author" name="author" required placeholder="Author">
+            <input class="form-row" type="number" id="page" name="number" required placeholder="Pages">
+            <div class="form-row">
+                <label for="read">Have you read it?</label>
+                <input type="checkbox" id="read" name="read"></input>
+            </div>
+            <button class="form-row" type="submit" id="submit">Add</button>
         </form>
     
         <div id="container">

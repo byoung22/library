@@ -98,7 +98,8 @@ body {
     font-size: 25px;
 }
 .header>button:hover,
-.button-row>button:hover {
+.button-row>button:hover,
+#form>button:hover {
     background-color: var(--button-hover);
 }
 
@@ -115,6 +116,8 @@ body {
     display: none;
 }
 #form {
+    height: 400px;
+    width: min(50vw, 700px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -123,10 +126,33 @@ body {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 #form.hidden {
     display: none;
-
+}
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 40px;
+    width: 400px;
+}
+#form .title {
+    font-size: 25px;
+    font-weight: bold;
+}
+#form>button {
+    border: none;
+    background-color: var(--grey);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 #container {
