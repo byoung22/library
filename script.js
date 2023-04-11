@@ -88,9 +88,6 @@ function createCard() {
         buttonContainer.appendChild(newRead);
         newRead.textContent = myObj.read ? 'Read' : 'Not Read';
 
-        
-
-
         let remove = document.createElement('button');
         remove.setAttribute('class', 'remove button right');
         remove.setAttribute('data-index', i);
