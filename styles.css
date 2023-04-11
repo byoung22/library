@@ -103,7 +103,7 @@ body {
     background-color: var(--button-hover);
 }
 
-#overlay{
+#overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -115,6 +115,7 @@ body {
 #overlay.hidden {
     display: none;
 }
+
 #form {
     height: 400px;
     width: min(50vw, 700px);
@@ -186,17 +187,17 @@ body {
     display: flex;
     width: 100%;
 }
-.card .button-container .button{
+.card .button-container .button {
     flex: 1;
     margin-bottom: -25px;
     padding: 15px 0px;
     border: 0;
     width: 100%;
 }
-.card .button-container .button.right{
+.card .button-container .button.right {
     border-radius: 0px 0px 14px 0px;
 }
-.card .button-container .button.left{
+.card .button-container .button.left {
     border-radius: 0px 0px 0px 14px;
 }
 .footer {
