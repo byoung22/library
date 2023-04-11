@@ -30,7 +30,12 @@ container.addEventListener('click', function(event) {
         const index = parseInt(event.target.getAttribute('data-index'));
         myLibrary.splice(index, 1);
         createCard();
-      };
+    };
+    if(event.target.classList.contains('read')) {
+        const index = parseInt(event.target.getAttribute('data-index'));
+        myLibrary[index].read ? myLibrary[index].read = false : myLibrary[index].read = true;
+        createCard();
+    };
 })
 
 // do stuff here
@@ -78,15 +83,27 @@ function createCard() {
         newCard.appendChild(buttonContainer);
 
         let newRead = document.createElement('button');
-        newRead.setAttribute('class', 'button left');
+        newRead.setAttribute('class', 'read button left');
+        newRead.setAttribute('data-index', i);
         buttonContainer.appendChild(newRead);
-        newRead.textContent = myObj.read ?'Read' :'Not Read';
+        newRead.textContent = myObj.read ? 'Read' : 'Not Read';
+
+        
+
 
         let remove = document.createElement('button');
         remove.setAttribute('class', 'remove button right');
         remove.setAttribute('data-index', i);
         buttonContainer.appendChild(remove);
         remove.textContent = 'Remove';
+
+        if (myObj.read) {
+            newRead.style.setProperty('background-color', 'rgb(227, 255, 191)');
+            remove.style.setProperty('background-color', 'rgb(227, 255, 191)');
+        } else {
+            newRead.style.setProperty('background-color', 'rgb(255, 191, 191)');
+            remove.style.setProperty('background-color', 'rgb(255, 191, 191)');
+        }
     }
 }
 
