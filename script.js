@@ -40,11 +40,19 @@ container.addEventListener('click', function(event) {
 
 // do stuff here
 function submitForm() {
-    let titleVal = title.value;
-    let authorVal = author.value;
-    let pageVal = page.value;
-    let readVal = read.checked;
+    /* 
+    Turn into class
     let newObj = { title: titleVal, author: authorVal, page: pageVal, read: readVal};
+    */
+    class Obj {
+        constructor (title, author, page, read) {
+            this.title = title;
+            this.author = author;
+            this.page = page;
+            this.read = read;
+        }
+    }
+    let newObj = new Obj(title.value, author.value, page.value, read.checked);
     myLibrary.push(newObj);
     // console.log(myLibrary); just for testing
     
