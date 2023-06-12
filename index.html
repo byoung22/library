@@ -16,10 +16,12 @@
     <div class="body">
         <div class="button-row"><button id="add-book">+ Add Book</button></div>
         <div id="overlay" class="hidden"></div>
-        <form id="form" class="hidden">
+        <form id="form" class="hidden" novalidate>
             <div class="form-row title">New Book Info</div>
-            <input class="form-row" type="text" id="title" name="title" required placeholder="Title">
+            <input class="form-row" type="text" id="title" name="title" required minlength="3" placeholder="Title">
+            <label for="title" class="titleError hidden"></label>
             <input class="form-row" type="text" id="author" name="author" required placeholder="Author">
+            <label for="author" class="hidden"></label>
             <input class="form-row" type="number" id="page" name="number" required placeholder="Pages">
             <div class="form-row">
                 <label for="read">Have you read it?</label>

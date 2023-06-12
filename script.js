@@ -1,4 +1,5 @@
 const title = document.getElementById('title');
+const titleError = document.querySelector('.titleError');
 const author = document.getElementById('author');
 const page = document.getElementById('page');
 const read = document.getElementById('read');
@@ -23,6 +24,15 @@ overlay.addEventListener('click', function() {
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     submitForm();
+});
+
+title.addEventListener('input', () => {
+    if (!title.checkValidity()) {
+        titleError.textContent = title.validationMessage;
+        titleError.classList.remove('hidden');
+    } else {
+        titleError.classList.add('hidden');
+    }
 });
 
 container.addEventListener('click', function(event) {

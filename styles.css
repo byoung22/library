@@ -49,6 +49,10 @@ table {
     --button-hover: #c2c2c2;
 }
 
+.hidden {
+    display: none;
+}
+
 body {
     display: grid;
     grid-template-rows: 95px 1fr 50px;
@@ -154,6 +158,9 @@ body {
     border-radius: 8px;
     font-weight: bold;
     font-size: 20px;
+}
+#form label {
+    
 }
 
 #container {
